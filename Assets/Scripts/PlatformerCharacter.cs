@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlatformerCharacter : MonoBehaviour
 {
    
-    Rigidbody2D myRigidbody; // stores a reference to the Rigidbody
+    Rigidbody2D myRigidbody; 
 
     float inputHorizontal;
     bool isJumping;
@@ -25,14 +25,13 @@ public class PlatformerCharacter : MonoBehaviour
         // get left/right arrow keys to move left/right with a virtual joystick
         inputHorizontal = Input.GetAxis("Horizontal");
 
-        // press SPACE to jump... but only if we're standing on the ground
         if ( Input.GetButtonDown("Jump") && isGrounded == true ) {
             isJumping = true;
         }
     }
 
     void FixedUpdate() {
-        // we need to put the Y value back into itself to preserve vertical velocity
+
         myRigidbody.velocity = new Vector2( inputHorizontal * moveSpeed, myRigidbody.velocity.y );
 
         // if we need to do the jump, then add Y velocity

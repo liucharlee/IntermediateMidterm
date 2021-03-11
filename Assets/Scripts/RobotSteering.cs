@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// PURPOSE: demonstrate a robot sensing walls in front of it and turning, to explore a maze
-// USAGE: put this on an "robot" object facing along +X axis (red axis)
+//demonstrate a robot sensing walls in front of it and turning, to explore a maze
+
 public class RobotSteering : MonoBehaviour
 {
     // Update is called once per frame
     void Update()
     {
         // always move "forward" (move along it's X axis (red arrow) )
-        transform.Translate(2f * Time.deltaTime, 0f, 0f); // move 2m per second
+        transform.Translate(2f * Time.deltaTime, 0f, 0f); 
 
         // raycast in front of us and randomly turn +/- 90 degrees if there's a wall
         Ray2D myRay = new Ray2D( transform.position, transform.right );

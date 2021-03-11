@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// PURPOSE: show how to aim a turret and fire hitscan weapon based on mouse aiming
-// USAGE: put this on a player turret object facing east (+X Axis)
+//aim a turret and fire hitscan weapon based on mouse aiming
 public class MouseAim : MonoBehaviour
 {
     public GameObject explodePrefab; // assign in Inspector
@@ -22,7 +21,6 @@ public class MouseAim : MonoBehaviour
         float myMaxRayDist = 10f;
         RaycastHit2D myRayHit = Physics2D.Raycast( myRay.origin, myRay.direction, myMaxRayDist );
 
-        // did we hit something? if so, instantiate something at impact point
         if ( myRayHit.collider != null && Input.GetMouseButtonDown(0) ) {
             // instantiate an explosion at the impact point
             Instantiate( explodePrefab, myRayHit.point, Quaternion.Euler(0, 0, 0) );
