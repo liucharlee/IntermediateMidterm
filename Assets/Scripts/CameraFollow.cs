@@ -11,7 +11,6 @@ public class CameraFollow : MonoBehaviour
         
         cameraFollowTarget = gameObject.transform; // start camera following this object
         
-
-        cameraTransform.position = cameraFollowTarget.position + new Vector3( 0f, 0f, -39f ); // z:-10 is extra camera offset
+        cameraTransform.position = cameraFollowTarget.position + new Vector3( 0f, 5f, -39f ); // z:-10 is extra camera offset
     }
 }
