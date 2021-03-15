@@ -12,8 +12,8 @@ public class AllySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnTimer = 8f/Time.deltaTime;
-        spawnTimerReset = 8f/Time.deltaTime;
+        spawnTimer = 1f/Time.deltaTime;
+        spawnTimerReset = 1f/Time.deltaTime;
     }
 
     // Update is called once per frame
