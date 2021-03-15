@@ -23,7 +23,7 @@ public class EnemySpawn : MonoBehaviour
 
         if(spawnTimer <= 0){
             //spawn enemy above player position
-            Instantiate( myEnemyPrefab, transform.position + new Vector3( Random.Range(-30f, 30f), Random.Range(30f, 50f), 0f ), Quaternion.identity );
+            Instantiate( myEnemyPrefab, transform.position + new Vector3( Random.Range(-20f, 20f), Random.Range(30f, 50f), 0f ), Quaternion.identity );
             spawnTimer = spawnTimerReset;
         }
         
