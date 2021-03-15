@@ -12,8 +12,8 @@ public class AllySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnTimer = 10f/Time.deltaTime;
-        spawnTimerReset = 10f/Time.deltaTime;
+        spawnTimer = 8f/Time.deltaTime;
+        spawnTimerReset = 8f/Time.deltaTime;
     }
 
     // Update is called once per frame
@@ -23,7 +23,7 @@ public class AllySpawn : MonoBehaviour
 
         if(spawnTimer <= 0){
             //spawn enemy above player position
-            Instantiate( myEnemyPrefab, transform.position + new Vector3( Random.Range(-15f, 20f), Random.Range(30f, 50f), 0f ), Quaternion.identity );
+            Instantiate( myEnemyPrefab, transform.position + new Vector3( Random.Range(-10f, 30f), Random.Range(30f, 50f), 0f ), Quaternion.identity );
             spawnTimer = spawnTimerReset;
         }
         

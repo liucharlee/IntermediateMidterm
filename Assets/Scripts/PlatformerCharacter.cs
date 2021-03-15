@@ -50,7 +50,7 @@ public class PlatformerCharacter : MonoBehaviour
         }
 
         if ( isDashing ) {
-            myRigidbody.velocity = new Vector2( myRigidbody.velocity.x * 10f, myRigidbody.velocity.y);
+            myRigidbody.velocity = new Vector2( myRigidbody.velocity.x * 8f, myRigidbody.velocity.y);
             isDashing = false;
         }
     }

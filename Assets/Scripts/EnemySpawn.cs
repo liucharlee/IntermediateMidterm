@@ -12,8 +12,8 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnTimer = 2f/Time.deltaTime;
-        spawnTimerReset = 2f/Time.deltaTime;
+        spawnTimer = 3f/Time.deltaTime;
+        spawnTimerReset = 3f/Time.deltaTime;
     }
 
     // Update is called once per frame
